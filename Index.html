@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Horloge de Tunisie | Élégance & Précision</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Horloge de Tunisie ✨</h1>
+            <div class="timezone-selector">
+                <label for="timezone">Fuseau horaire :</label>
+                <select id="timezone">
+                    <option value="Africa/Tunis" selected>Tunisie (CET) - Par défaut</option>
+                    <option value="UTC">UTC (Temps universel)</option>
+                    <option value="Europe/Paris">Europe/Paris (CET/CEST)</option>
+                    <option value="America/New_York">Amérique/New York (EST/EDT)</option>
+                    <option value="Asia/Tokyo">Asie/Tokyo (JST)</option>
+                    <option value="Australia/Sydney">Australie/Sydney (AEDT)</option>
+                    <option value="Pacific/Honolulu">Pacifique/Honolulu (HST)</option>
+                    <option value="Africa/Casablanca">Afrique/Casablanca</option>
+                    <option value="Africa/Algiers">Afrique/Alger</option>
+                </select>
+            </div>
+        </header>
+
+        <div class="main-layout">
+            <!-- Horloge analogique à GAUCHE -->
+            <div class="analog-clock-container">
+                <div class="analog-clock">
+                    <canvas id="clockCanvas" width="300" height="300"></canvas>
+                    <div class="clock-center"></div>
+                    <div class="glow-effect"></div>
+                </div>
+                <div class="clock-caption">
+                    <span>Horloge Analogique</span>
+                </div>
+            </div>
+
+            <!-- Section droite avec affichage numérique et citation -->
+            <div class="right-section">
+                <div class="digital-display">
+                    <div class="time-digit" id="digitalTime">--:--:--</div>
+                    <div class="date-digit" id="dateDisplay">--- --, ----</div>
+                    <div class="timezone-info" id="timezoneInfo">Fuseau : Tunisie (CET)</div>
+
+                    <!-- Citation -->
+                    <div class="quote-container">
+                        <div class="quote-icon">❝</div>
+                        <div class="quote-text" id="quoteText">Le temps est un grand maître, il résout bien des problèmes.</div>
+                        <div class="quote-author" id="quoteAuthor">— Proverbe tunisien</div>
+                    </div>
+
+                    <!-- Bouton de réinitialisation du temps -->
+                    <div class="time-reset-container">
+                        <button id="elegantResetBtn" class="elegant-reset-btn" type="button">
+                            <span class="btn-icon">★</span>
+                            <span class="btn-text">Synchronisation temporelle</span>
+                            <span class="btn-glow"></span>
+                        </button>
+                        <div class="reset-feedback" id="resetFeedback"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="customization">
+            <h3>💎 Personnalisation Premium 💎</h3>
+            <div class="color-pickers">
+                <div class="color-item">
+                    <label for="dialColor">Cadran</label>
+                    <input type="color" id="dialColor" value="#ffffff">
+                </div>
+                <div class="color-item">
+                    <label for="hourColor">Aiguille Heure</label>
+                    <input type="color" id="hourColor" value="#1a1a2e">
+                </div>
+                <div class="color-item">
+                    <label for="minColor">Aiguille Minute</label>
+                    <input type="color" id="minColor" value="#16213e">
+                </div>
+                <div class="color-item">
+                    <label for="secColor">Aiguille Seconde</label>
+                    <input type="color" id="secColor" value="#ff6b6b">
+                </div>
+                <div class="color-item">
+                    <label for="markColor">Graduations</label>
+                    <input type="color" id="markColor" value="#c44569">
+                </div>
+            </div>
+            <button id="resetColors" class="reset-btn" type="button">Restaurer l'élégance</button>
+        </div>
+
+        <footer>
+            <p>⚜️ Temps réel | Précision absolue | L'héritage de Carthage ⚜️</p>
+        </footer>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
